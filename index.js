@@ -1,11 +1,11 @@
-// You are given an array representing a series of transactions in a small business. 
+// You are given an array representing a series of transactions in a small business.
 // Each transaction is an array containing the transaction type ("income" or "expense") and the amount.
 const transactions = [
-    ["income", 1000],
-    ["income", 1500],
-    ["expense", 500],
-    ["expense", 300],
-    ["income", 700],
+  ["income", 1000],
+  ["income", 1500],
+  ["expense", 500],
+  ["expense", 300],
+  ["income", 700],
 ];
 
 /*****************************************************************
@@ -19,8 +19,12 @@ Task 2) Create a new array containing only the expense transactions.
 
 ******************************************************************/
 
-const incomes = transactions.filter((transaction) => transaction[0] === "income");
-const expenses = transactions.filter((transaction) => transaction[0] === "expense");
+const incomes = transactions.filter(
+  (transaction) => transaction[0] === "income"
+);
+const expenses = transactions.filter(
+  (transaction) => transaction[0] === "expense"
+);
 
 // console.log(incomes, expenses)
 
@@ -35,8 +39,14 @@ Task 4) Calculate the total expenses and return it.
 
 ******************************************************************/
 
-const totalIncome = incomes.reduce((incomeSum, currentTransaction) => currentTransaction[1] + incomeSum, 0);
-const totalExpense = expenses.reduce((expenseSum, currentTransaction) => currentTransaction[1] + expenseSum, 0);
+const totalIncome = incomes.reduce(
+  (incomeSum, currentTransaction) => currentTransaction[1] + incomeSum,
+  0
+);
+const totalExpense = expenses.reduce(
+  (expenseSum, currentTransaction) => currentTransaction[1] + expenseSum,
+  0
+);
 
 // console.log(totalIncome, totalExpense);
 
@@ -54,6 +64,8 @@ Task 6) Identify and create a new array with transactions (both incomes and expe
 // Note: Use appropriate JavaScript array iteration methods such as filter, reduce, etc., to achieve the desired output for each task.
 
 const netTotal = totalIncome - totalExpense;
-const transactionsAboveOrEqualTo500 = transactions.filter((transaction) => transaction[1] >= 500);
+const transactionsAboveOrEqualTo500 = transactions.filter(
+  (transaction) => transaction[1] >= 500
+);
 
 // console.log(netTotal, transactionsAboveOrEqualTo500);
